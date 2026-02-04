@@ -18,14 +18,20 @@ struct ListAllBreeds_View: View {
                 } else if let error = viewModel.errorMessage {
                     Text(error)
                 } else {
-                    List(viewModel.allBreeds, id: \.self) { dogBreed in
-                        Text(dogBreed)
+                    List {
+                        ForEach(viewModel.allBreeds) { breed in
+                            Section(breed.breedName) {
+                                ForEach(breed.subBreeds, id: \.self) { subBreed in
+                                    Text(subBreed)
+                                }
+                            }
+                        }
                     }
                 }
             }
             .navigationTitle("Dog Breeds")
             .task {
-                await viewModel.loadDogBreeds()
+                await viewModel.loadAllBreedsData()
             }
         }
     }
