@@ -1,5 +1,5 @@
 //
-//  DogListView.swift
+//  ListAllBreeds_View.swift
 //  Swift-MVVM-Arch
 //
 //  Created by Himanshu Patwardhan on 30/01/26.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct DogListView: View {
-    @StateObject var viewModel: DogListViewModel
+struct ListAllBreeds_View: View {
+    @StateObject var viewModel: ListAllBreeds_ViewModel
     
     var body: some View {
         NavigationStack {
@@ -18,7 +18,7 @@ struct DogListView: View {
                 } else if let error = viewModel.errorMessage {
                     Text(error)
                 } else {
-                    List(viewModel.dogBreeds, id: \.self) { dogBreed in
+                    List(viewModel.allBreeds, id: \.self) { dogBreed in
                         Text(dogBreed)
                     }
                 }

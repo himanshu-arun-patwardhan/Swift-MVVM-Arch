@@ -1,5 +1,5 @@
 //
-//  APIService.swift
+//  ListAllBreeds_APIService.swift
 //  Swift-MVVM-Arch
 //
 //  Created by Himanshu Patwardhan on 30/01/26.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-final class APIService: APIServiceProtocol {
+final class ListAllBreeds_APIService: ListAllBreeds_APIServiceProtocol {
     let url = URL(string: "https://dog.ceo/api/breeds/list/all")!
     
-    func fetchDogBreeds() async throws -> [String : [String]] {
+    func fetchAllBreeds() async throws -> [String : [String]] {
         
         let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try JSONDecoder().decode(APIResponseModel.self, from: data)
+        let response = try JSONDecoder().decode(ListAllBreeds_APIResponseModel.self, from: data)
         return response.message
     }
 }
