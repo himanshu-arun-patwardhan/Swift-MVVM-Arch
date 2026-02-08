@@ -22,7 +22,12 @@ struct ListAllBreeds_View: View {
                         ForEach(viewModel.allBreeds) { breed in
                             Section(breed.breedName) {
                                 ForEach(breed.subBreeds, id: \.self) { subBreed in
-                                    Text(subBreed)
+                                    NavigationLink {
+                                        SubBreedDetail_View()
+                                    } label: {
+                                        Text(subBreed)
+                                    }
+
                                 }
                             }
                         }
