@@ -10,6 +10,7 @@ import SwiftUI
 struct SubBreedDetail_View: View {
     let breed: String
     let subBreed: String
+    let viewModel: SubBreedDetail_ViewModel
     
     var body: some View {
         Text(subBreed)
