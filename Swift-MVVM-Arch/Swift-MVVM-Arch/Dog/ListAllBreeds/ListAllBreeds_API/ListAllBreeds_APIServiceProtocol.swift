@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol ListAllBreeds_APIServiceProtocol  {
     func fetchAllBreeds() async throws -> [String : [String]]
 }
