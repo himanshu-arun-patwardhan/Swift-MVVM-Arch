@@ -8,10 +8,11 @@
 import Foundation
 import Combine
 
+@MainActor
 class SubBreedDetail_ViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
-    @Published var images: [String] = []
+    @Published var imageURLs: [URL] = []
     
     private let apiService: SubBreed_APIService
     
@@ -25,11 +26,15 @@ class SubBreedDetail_ViewModel: ObservableObject {
         
         do {
             let response = try await apiService.fetchRandomImages(breed: breed.lowercased(), subBreed: subBreed.lowercased())
-            images = response
+            imageURLs = makeStructuredData(imageUrls: response)
         } catch {
             errorMessage = error.localizedDescription
         }
         
         isLoading = false
+    }
+    
+    private func makeStructuredData(imageUrls: [String]) -> [URL] {
+        imageUrls.compactMap(URL.init)
     }
 }
