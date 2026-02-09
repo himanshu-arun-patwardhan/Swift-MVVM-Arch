@@ -23,7 +23,7 @@ struct ListAllBreeds_View: View {
                             Section(breed.breedName) {
                                 ForEach(breed.subBreeds, id: \.self) { subBreed in
                                     NavigationLink {
-                                        SubBreedDetail_View()
+                                        SubBreedDetail_View(breed: breed.breedName, subBreed: subBreed)
                                     } label: {
                                         Text(subBreed)
                                     }

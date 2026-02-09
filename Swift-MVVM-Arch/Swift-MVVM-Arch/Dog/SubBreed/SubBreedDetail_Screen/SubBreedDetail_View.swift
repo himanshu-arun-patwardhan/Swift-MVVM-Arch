@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct SubBreedDetail_View: View {
+    let breed: String
+    let subBreed: String
+    
     var body: some View {
-        Text("sub-breed detail screen")
+        Text(subBreed)
+            .navigationTitle(breed)
     }
 }
