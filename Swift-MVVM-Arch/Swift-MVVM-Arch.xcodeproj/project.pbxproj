@@ -29,9 +29,52 @@
 		9013B75B2F2CB02400DA6DA6 /* Swift-MVVM-ArchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-MVVM-ArchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9055A30C2F40476D00E2F301 /* Exceptions for "Swift-MVVM-Arch" folder in "Swift-MVVM-ArchTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Dog/ListAllBreeds/ListAllBreeds_API/ListAllBreeds_APIResponseModel.swift,
+				Dog/ListAllBreeds/ListAllBreeds_API/ListAllBreeds_APIService.swift,
+				Dog/ListAllBreeds/ListAllBreeds_API/ListAllBreeds_APIServiceProtocol.swift,
+				Dog/ListAllBreeds/ListAllBreeds_Dependency/ListAllBreedsViewFactory.swift,
+				Dog/ListAllBreeds/ListAllBreeds_Screen/ListAllBreeds_View.swift,
+				Dog/ListAllBreeds/ListAllBreeds_Screen/ListAllBreeds_ViewModel.swift,
+				Dog/SubBreed/SubBreed_API/SubBreed_APIResponseModel.swift,
+				Dog/SubBreed/SubBreed_API/SubBreed_APIService.swift,
+				Dog/SubBreed/SubBreed_API/SubBreed_APIServiceProtocol.swift,
+				Dog/SubBreed/SubBreed_Dependency/SubBreedDetailViewFactory.swift,
+				Dog/SubBreed/SubBreedDetail_Screen/SubBreedDetail_View.swift,
+				Dog/SubBreed/SubBreedDetail_Screen/SubBreedDetail_ViewModel.swift,
+			);
+			target = 9013B7502F2CB02400DA6DA6 /* Swift-MVVM-ArchTests */;
+		};
+		9055A3192F4047A800E2F301 /* Exceptions for "Swift-MVVM-Arch" folder in "Swift-MVVM-ArchUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Dog/ListAllBreeds/ListAllBreeds_API/ListAllBreeds_APIResponseModel.swift,
+				Dog/ListAllBreeds/ListAllBreeds_API/ListAllBreeds_APIService.swift,
+				Dog/ListAllBreeds/ListAllBreeds_API/ListAllBreeds_APIServiceProtocol.swift,
+				Dog/ListAllBreeds/ListAllBreeds_Dependency/ListAllBreedsViewFactory.swift,
+				Dog/ListAllBreeds/ListAllBreeds_Screen/ListAllBreeds_View.swift,
+				Dog/ListAllBreeds/ListAllBreeds_Screen/ListAllBreeds_ViewModel.swift,
+				Dog/SubBreed/SubBreed_API/SubBreed_APIResponseModel.swift,
+				Dog/SubBreed/SubBreed_API/SubBreed_APIService.swift,
+				Dog/SubBreed/SubBreed_API/SubBreed_APIServiceProtocol.swift,
+				Dog/SubBreed/SubBreed_Dependency/SubBreedDetailViewFactory.swift,
+				Dog/SubBreed/SubBreedDetail_Screen/SubBreedDetail_View.swift,
+				Dog/SubBreed/SubBreedDetail_Screen/SubBreedDetail_ViewModel.swift,
+			);
+			target = 9013B75A2F2CB02400DA6DA6 /* Swift-MVVM-ArchUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9013B7462F2CB02100DA6DA6 /* Swift-MVVM-Arch */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9055A30C2F40476D00E2F301 /* Exceptions for "Swift-MVVM-Arch" folder in "Swift-MVVM-ArchTests" target */,
+				9055A3192F4047A800E2F301 /* Exceptions for "Swift-MVVM-Arch" folder in "Swift-MVVM-ArchUITests" target */,
+			);
 			path = "Swift-MVVM-Arch";
 			sourceTree = "<group>";
 		};
