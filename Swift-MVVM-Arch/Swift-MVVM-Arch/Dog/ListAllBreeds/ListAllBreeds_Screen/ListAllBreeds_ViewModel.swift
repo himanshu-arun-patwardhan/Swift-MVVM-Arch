@@ -14,9 +14,9 @@ class ListAllBreeds_ViewModel: ObservableObject {
     @Published var errorMessage: String? = nil
     @Published var allBreeds: [DogBreed] = []
     
-    let apiService: ListAllBreeds_APIService
+    let apiService: ListAllBreeds_APIServiceProtocol
     
-    init(apiService: ListAllBreeds_APIService) {
+    init(apiService: ListAllBreeds_APIServiceProtocol) {
         self.apiService = apiService
     }
     
